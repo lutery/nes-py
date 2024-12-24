@@ -10,7 +10,7 @@ os.environ['CCX'] = 'g++'
 
 
 # read the contents from the README file
-with open('README.md') as README_file:
+with open('README.md', encoding='utf-8') as README_file:
     README = README_file.read()
 
 
