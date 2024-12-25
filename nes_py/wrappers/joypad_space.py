@@ -1,7 +1,7 @@
 """An environment wrapper to convert binary to discrete action space."""
 import gymnasium as gym
-from gym import Env
-from gym import Wrapper
+from gymnasium import Env
+from gymnasium import Wrapper
 
 
 class JoypadSpace(Wrapper):
