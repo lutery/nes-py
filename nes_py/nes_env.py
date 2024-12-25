@@ -270,7 +270,7 @@ class NESEnv(gym.Env):
         # set the done flag to false
         self.done = False
         # return the screen from the emulator
-        return self.screen
+        return self.screen, self._get_info()
 
     def _did_reset(self):
         """Handle any RAM hacking after a reset occurs."""
@@ -312,7 +312,7 @@ class NESEnv(gym.Env):
         elif reward > self.reward_range[1]:
             reward = self.reward_range[1]
         # return the screen from the emulator and other relevant data
-        return self.screen, reward, self.done, info
+        return self.screen, reward, self.done, self.done, info
 
     def _get_reward(self):
         """Return the reward after a step occurs."""
